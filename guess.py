@@ -24,7 +24,7 @@ def predict_image(prediction_dict):
     # Get unique class names from the labels
     class_names = np.unique(img_labels).tolist()
     # Get results
-    if np.max(score) < 0.965:
+    if np.max(score) < 0.5:
         prediction_name = 'Unknown'
         prediction_confidence = f'N/A'
     else:
